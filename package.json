@@ -10,11 +10,8 @@
     "build": "webpack --mode production",
     "lint": "eslint src/"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
+  
   "lint-staged": {
     "src/**/*.js": "eslint"
   },
@@ -51,7 +48,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
-    "husky": "^1.3.1",
+    
     "lint-staged": "^8.1.5",
     "redux-devtools-extension": "^2.13.8",
     "webpack-dev-server": "^3.3.1"
