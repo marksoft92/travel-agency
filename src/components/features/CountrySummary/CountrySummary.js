@@ -7,7 +7,7 @@ import DetailsBox from '../../common/DetailsBox/DetailsBox';
 import DetailsImage from '../../common/DetailsImage/DetailsImage';
 import List from '../../common/List/List';
 import ListItem from '../../common/ListItem/ListItem';
-import {Row, Col} from 'react-flexbox-grid';
+import {Row, Col} from 'react-flexbox-grid';aq  `AQ `
 
 const CountrySummary = ({alpha3Code, name, flag, trips, region, subregion, languages, capital}) => (
 
