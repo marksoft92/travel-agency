@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "webpack --mode production",
@@ -64,6 +63,7 @@
     "jest-resolve": "^24.8.0",
     "jest-watch-typeahead": "^0.3.1",
     "lint-staged": "^8.1.5",
+    "npm-run-all": "^4.1.5",
     "react-test-renderer": "^16.8.6",
     "redux-devtools-extension": "^2.13.8",
     "webpack-dev-server": "^3.3.1"
