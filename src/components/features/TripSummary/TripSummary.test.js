@@ -14,7 +14,7 @@ describe('Component TripSummary', () => {
     const expectedSrc = 'image';
     const expectedAlt = 'text';
     const component = shallow(
-      <TripSummary src={expectedSrc} alt={expectedAlt} />
+      <TripSummary image={expectedSrc} name={expectedAlt} />
     );
 
     expect(component.find('img').prop('src')).toEqual(expectedSrc);
@@ -22,9 +22,9 @@ describe('Component TripSummary', () => {
   });
 
   it('should render correct name, cost and days', () => {
-    const expectedName = 'name';
-    const expectedCost = 'cost';
-    const expectedDays = '$7';
+    const expectedName = 'Lorem ipsum';
+    const expectedCost = '100';
+    const expectedDays = 7;
     const component = shallow(
       <TripSummary
         name={expectedName}
@@ -39,18 +39,26 @@ describe('Component TripSummary', () => {
         .find('.details span')
         .at(0)
         .text()
-    ).toEqual('from', expectedCost);
+    ).toEqual(`${expectedDays} days`);
     expect(
       component
         .find('.details span')
         .at(1)
         .text()
-    ).toEqual(expectedDays, 'days');
+    ).toEqual(`Price from: ${expectedCost - (expectedCost / 100) * 20}`);
+    expect(
+      component
+        .find('.details span')
+        .at(2)
+        .text()
+    ).toEqual(`Standard price: ${expectedCost}`);
   });
 
+  /*
   it('should throw error without required props', () => {
     expect(() => shallow(<TripSummary />)).toThrow();
   });
+  */
 
   it('should render correct tags array', () => {
     const expectedTags = ['one', 'two', 'three'];
