@@ -119,8 +119,8 @@ for (let type in optionTypes) {
       case 'icons': {
         /* tests for icons */
         it('contains div with icon class', () => {
-          const div = renderedSubcomponent.find('.icon');
-          expect(div.length).toBe(3);
+          const div = renderedSubcomponent.find('.icon .icon');
+          expect(div).toHaveLength(3);
 
           const divActive = renderedSubcomponent.find('.iconActive');
           expect(divActive.length).toBe(1);
